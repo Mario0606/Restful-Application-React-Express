@@ -1,11 +1,12 @@
-const express = require('express')
+const express = require("express");
+// Rotas
+const CategoriesRoutes = require("./routes/CategoriesRoutes");
 
-const app = express()
+const port = process.env.port || 3000;
+const app = express();
 
-app.get('/', (req, res, next) => {
-    res.status(200).json({'nome': 2})
-})
+app.use(CategoriesRoutes);
 
-app.listen(3000, 'localhost', () => {
-    console.log('Server online')
-})
+app.listen(port, "localhost", () => {
+  console.log(`Server online na porta ${port}`);
+});
