@@ -3,6 +3,8 @@ const bodyParser = require("body-parser")
 
 // Rotas
 const CategoriesRoutes = require("./modules/categories/CategoriesRoutes");
+const ProductsRoutes = require("./modules/products/ProductsRoutes");
+const ProvidersRoutes = require("./modules/providers/ProvidersRoutes");
 
 const port = process.env.PORT || 3000;
 const domain = 'localhost'
@@ -15,6 +17,8 @@ app.use(bodyParser.urlencoded({
 app.set('json spaces', 4)
 
 app.use(CategoriesRoutes);
+app.use(ProvidersRoutes);
+app.use(ProductsRoutes);
 
 app.use('/', (req, res) => {
     res.send('<h1>Hello world</h1>')

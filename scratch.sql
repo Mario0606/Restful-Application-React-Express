@@ -1,3 +1,4 @@
+BEGIN;
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
@@ -59,3 +60,4 @@ INNER JOIN categories ON products.id_categories = categories.id
 WHERE
     categories.name = 'Imported' AND
     providers.name = 'Sansul SA';
+COMMIT;
