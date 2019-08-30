@@ -5,12 +5,14 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.4",
     "pg": "^7.9.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
   },
   "scripts": {
-    "run-server": "nodemon ./src/server.js"
+    "start": "nodemon ./src/server.js"
   }
 }
