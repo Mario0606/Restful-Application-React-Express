@@ -1,2 +1,3 @@
 # Learning...
-Studying React + Express
+Studying React and Express
+
